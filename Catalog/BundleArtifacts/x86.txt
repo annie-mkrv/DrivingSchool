@@ -1,2 +1,0 @@
-MainPackage=C:\Users\Dima\Desktop\Catalog\Catalog\bin\x86\Debug\Catalog_1.0.0.0_x86_Debug.msix
-SymbolPackage=C:\Users\Dima\Desktop\Catalog\Catalog\obj\x86\Debug\Symbols\Catalog_1.0.0.0_x86_Debug.appxsym
