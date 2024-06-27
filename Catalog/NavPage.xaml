@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="Catalog.NavPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Catalog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="64"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="64"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--<Button Click="Logout" Width="120"  Background="#A699F8" CornerRadius="12" Margin="302,0,0,0" >Выход</Button>-->
+
+            <Frame Grid.Row="1" Name="frx"></Frame>
+            <Grid Grid.Row="2" Background="#EEEEEE">
+
+
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Margin="5" Click="Admin_MainPage_Click"  Name="Admin_MainPage" Width="70" Foreground="WhiteSmoke" Background="#4F4F4F">Главная</Button>
+                    <Button Margin="5" Click="Admin_Classes_Click" Name="Admin_Classes" Width="95" Foreground="WhiteSmoke" Background="#4F4F4F">Расписание</Button>
+                    <Button Margin="5" Click="Admin_Student_Click" Name="Admin_Student" Width="75" Foreground="WhiteSmoke" Background="#4F4F4F">Ученики</Button>
+                    <Button Margin="5" Click="Admin_Instructor_Click" Name="Admin_Instructor" Width="105" Foreground="WhiteSmoke" Background="#4F4F4F">Инструкторы</Button>
+                    <Button Margin="5" Click="Admin_Car_Click" Name="Admin_Car" Width="55" Foreground="WhiteSmoke" Background="#4F4F4F">Авто</Button>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Page>

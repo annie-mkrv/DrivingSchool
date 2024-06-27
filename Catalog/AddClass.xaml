@@ -1,0 +1,51 @@
+﻿<!--Добавление занятия (Администратор) -->
+
+<Page
+    x:Class="Catalog.AddClass"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Catalog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel Padding="16">
+                <Grid>
+                    <Button Click="BackAdminClasses" Background="white" HorizontalAlignment="Left" MaxHeight="25">
+                        <Image Source="./Assets/leftarrow.png"/>
+                    </Button>
+                    <TextBlock HorizontalAlignment="Center" FontWeight="Medium" FontSize="20" Name="HeaderUserClasses" Margin="0 0 0 0">Добавление занятия</TextBlock>
+                </Grid>
+
+                <TextBlock Margin="0 10 0 0">Время</TextBlock>
+                <ComboBox x:Name="Date" PlaceholderText="выберите время занятия" BorderThickness="2" BorderBrush="DarkGray" Margin="0 0 0 0">
+                    <x:String>08:00 - 10:00</x:String>
+                    <x:String>10:00 - 12:00</x:String>
+                    <x:String>12:00 - 14:00</x:String>
+                    <x:String>14:00 - 16:00</x:String>
+                    <x:String>16:00 - 18:00</x:String>
+                    <x:String>18:00 - 20:00</x:String>
+                    <x:String>20:00 - 22:00</x:String>
+                </ComboBox>
+
+                <TextBlock Margin="0 10 0 0">Инструктор</TextBlock>
+                <ComboBox x:Name="InstructorId_ComboBox" PlaceholderText="выберите инструктора" DisplayMemberPath="displayInstructor" BorderThickness="2" BorderBrush="DarkGray" Margin="0 0 0 0">
+                    <!--ЗДЕСЬ ДОЛЖНЫ ПОДТЯГИВАТЬСЯ ФИО ИНСТРУКТОРА И НОМЕР УЧЕБНОЙ МАШИНЫ-->
+                </ComboBox>
+
+                <TextBlock Margin="0 10 0 0">Ученик</TextBlock> 
+                <ComboBox x:Name="StudentId_ComboBox" PlaceholderText="выберите ученика" DisplayMemberPath="displayStudent" BorderThickness="2" BorderBrush="DarkGray" Margin="0 0 0 0">
+                    <x:String>Васильева Валерия Владимировна</x:String>
+                    <!--ЗДЕСЬ ДОЛЖНО ПОДТЯГИВАТЬСЯ ФИО УЧЕНКА-->
+                </ComboBox>
+
+                <Grid Margin="0 20 0 0">
+                    <Button Click="Add">Добавить</Button>
+                    <Button Click="Cancel" HorizontalAlignment="Right">Отменить</Button>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
